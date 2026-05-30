@@ -14,8 +14,7 @@ mkdir -p "$INSTALL_DIR"
 cd "$INSTALL_DIR"
 
 echo "[*] Downloading source package..."
-# DOWNLOAD_URL is a placeholder. Replace it with your actual hosted zip link.
-DOWNLOAD_URL="https://your-server-or-github.com/smart_collage.zip"
+DOWNLOAD_URL="https://github.com/TTT2978/photo-collage/raw/refs/heads/main/smart_collage.zip"
 wget -O package.zip "$DOWNLOAD_URL"
 
 echo "[*] Extracting source files..."
