@@ -2,12 +2,12 @@
 set -e
 
 echo "[*] Initializing system update..."
-sudo apt update -y
+apt update -y
 
 echo "[*] Installing required dependencies (ImageMagick & Build Tools)..."
-sudo apt install -y imagemagick g++ unzip wget
+apt install -y imagemagick g++ unzip wget
 
-# Định nghĩa không gian cài đặt trong thư mục Home của user
+# Define installation workspace
 INSTALL_DIR="$HOME/.smart_collage"
 mkdir -p "$INSTALL_DIR"
 cd "$INSTALL_DIR"
