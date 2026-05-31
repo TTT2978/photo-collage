@@ -1,3 +1,5 @@
+# Force TLS 1.2 to prevent GitHub connection drops
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $ErrorActionPreference = "Stop"
 
 Write-Host "[*] Checking for ImageMagick installation..."
@@ -8,6 +10,7 @@ if (-not (Get-Command magick -ErrorAction SilentlyContinue)) {
     Write-Host "[+] ImageMagick is already installed."
 }
 
+# Setup installation directory in user profile
 $InstallDir = "$HOME\.smart_collage"
 if (-not (Test-Path $InstallDir)) {
     New-Item -Path $InstallDir -ItemType Directory | Out-Null
@@ -33,4 +36,4 @@ if ($UserPath -notlike "*$InstallDir*") {
 }
 
 Write-Host "[+] Installation completed successfully!"
-Write-Host "[*] Please restart your Terminal/PowerShell and type 'img' to check."
+Write-Host "[*] IMPORTANT: Please CLOSE this window, open a NEW PowerShell window, and type 'img' to verify."
