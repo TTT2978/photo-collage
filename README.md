@@ -12,6 +12,8 @@ irm https://raw.githubusercontent.com/TTT2978/photo-collage/refs/heads/main/inst
 
 ==============================================
 
+To Use:
+
 flag:
 
 -n <name> Output file name (default: collage_output)
