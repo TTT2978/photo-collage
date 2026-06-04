@@ -1,36 +1,44 @@
-To Install:
-==============================================
+## 🚀 Installation
 
-Termux use this: 
+Choose the command that matches your operating system to install the tool.
+
+### 📱 Termux
+```bash
 curl -sL https://raw.githubusercontent.com/TTT2978/photo-collage/refs/heads/main/installer.sh | bash
+```
 
-Ubuntu use this: 
+### 🐧 Ubuntu
+```bash
 curl -sL https://raw.githubusercontent.com/TTT2978/photo-collage/refs/heads/main/installer_ubuntu.sh | bash
+```
 
-Windows use this: 
+### 🪟 Windows (PowerShell)
+```powershell
 irm https://raw.githubusercontent.com/TTT2978/photo-collage/refs/heads/main/installer.ps1 | iex
+```
 
-==============================================
+---
 
-To Use:
+## 🛠️ Usage & Flags
 
-flag:
-
--n <name> Output file name (default: collage_output)
-
--f <format> Output format (jpg, png, webp) (default: png)
-
--c <color/TB> Background color or TB(TB is Trans), (default: none)
-
--d <path> Destination directory path (default: .)
-
--s <number> Pixel spacing between images (default 135)
-
--dir <v/h> Direction: v (vertical), h (horizontal) (default: v)
-
--h , --help
+Customize your collage by using the following flags:
 
 
-==============================================
+| Flag | Description | Default Value |
+| :--- | :--- | :--- |
+| `-n <name>` | Output file name | `collage_output` |
+| `-f <format>` | Output image format (`jpg`, `png`, `webp`) | `png` |
+| `-c <color/TB>` | Background color or `TB` (Transparent) | `none` |
+| `-d <path>` | Destination directory path for the output | `.` (Current directory) |
+| `-s <number>` | Pixel spacing between images | `135` |
+| `-dir <v/h>` | Collage layout direction: `v` (vertical) or `h` (horizontal) | `v` |
+| `-h`, `--help` | Show the help message | — |
 
-Mechanism: When using this feature, no matter how many images you combine, it will automatically increase the resolution of the combined image. So, even if you combine 100 images, the file size will be larger, but the image will still be sharp when you zoom in... 
+---
+
+## ⚙️ Core Mechanism (Smart Scaling)
+
+Unlike standard tools that compress image data when merging, this tool features an **Automatic Resolution Enhancement** engine. 
+
+* **High-Fidelity Output:** No matter how many images you combine (even up to 100+ images), the tool dynamically scales up the canvas resolution.
+* **Crystal-Clear Quality:** While the final file size will increase accordingly, every single component image retains its original sharpness—allowing you to zoom in without any pixelation or loss of detail.
